@@ -1,0 +1,15 @@
+fill(255, 0, 0);
+
+textSize(30);
+text("Candy", 10, 30);
+textSize(20);
+text("* Sugary", 10, 60);
+text("* Good source of carbohydrates", 10, 80);
+text("* Energy to Fuel Your Day", 10, 100);
+text("* Very Delicious Candy", 10, 120);
+textSize(20);
+text("You can get a sugar Rush!!!", 10, 200);
+fill(0, 255, 30);
+rect(0, 131, 220, 39);
+rect(0, 212, 220, 39);
+rect(100, 14, 120, 40);
