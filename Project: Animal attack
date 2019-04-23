@@ -1,0 +1,61 @@
+//hard code into here
+
+var bodyX = 200;
+var bodyY = 220;
+var bodySize = 100;
+
+var earSize = bodySize*30/100;
+var nostrilSize = bodySize * 8/100;
+
+var eyeSize = bodySize*16/100;
+
+
+background(207, 254, 255);
+fill(240, 40, 177);
+ellipse(bodyX+bodySize*3/10, bodyY-bodySize*52/100, earSize, earSize); // ears
+ellipse(bodyX-bodySize*3/10, bodyY-bodySize*52/100, earSize, earSize); // ears
+fill(255, 127, 163);
+ellipse(bodyX, bodyY, bodySize, bodySize); // face
+
+
+fill(235, 82, 82);
+ellipse(bodyX, bodyY, bodySize-bodySize*70/100, bodySize-bodySize*70/100); //nose
+fill(0, 0, 0);
+ellipse(bodyX-bodySize*5/100, bodyY, nostrilSize, nostrilSize);//nostrils
+ellipse(bodyX+bodySize*5/100, bodyY, nostrilSize, nostrilSize);//nostrils
+
+//eyes
+fill(255, 255, 255);
+stroke(0, 0, 0);
+strokeWeight(2);
+ellipse(bodyX+bodySize*20/100, bodyY-bodySize*27/100, eyeSize, eyeSize);
+ellipse(bodyX-bodySize*20/100, bodyY-bodySize*27/100, eyeSize, eyeSize);
+
+
+draw = function() {
+    background(207, 254, 255);
+    fill(240, 40, 177);
+    ellipse(bodyX+bodySize*3/10, bodyY-bodySize*52/100, earSize, earSize); // ears
+    ellipse(bodyX-bodySize*3/10, bodyY-bodySize*52/100, earSize, earSize); // ears
+    fill(255, 127, 163);
+    ellipse(bodyX, bodyY, bodySize, bodySize); // face
+    
+    
+    fill(235, 82, 82);
+    ellipse(bodyX, bodyY, bodySize-bodySize*70/100, bodySize-bodySize*70/100); //nose
+    fill(0, 0, 0);
+    ellipse(bodyX-bodySize*5/100, bodyY, nostrilSize, nostrilSize);//nostrils
+    ellipse(bodyX+bodySize*5/100, bodyY, nostrilSize, nostrilSize);//nostrils
+    
+    //eyes
+    fill(255, 255, 255);
+    stroke(0, 0, 0);
+    strokeWeight(2);
+    ellipse(bodyX+bodySize*20/100, bodyY-bodySize*27/100, eyeSize,    eyeSize);
+    ellipse(bodyX-bodySize*20/100, bodyY-bodySize*27/100, eyeSize, eyeSize);
+    bodySize++;
+    earSize = bodySize*30/100;
+    nostrilSize = bodySize * 8/100;
+
+    eyeSize = bodySize*16/100;
+};
