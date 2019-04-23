@@ -1,0 +1,56 @@
+var xPositions = [200];
+var yPositions = [0];
+
+draw = function() {
+    if (xPositions.length > 60)
+    {
+        background(26, 30, 31);
+    }else{
+    background(190, 232, 222);
+    }
+    mouseClicked = function() {
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
+    };
+    for (var i = 0; i < xPositions.length; i++) {
+        noStroke();
+        fill(0, 200, 255);
+        ellipse(xPositions[i], yPositions[i], 10, 10);
+        if (yPositions[i] > 400){
+            yPositions[i] = 0;
+        }
+        yPositions[i] += 5;
+    }
+    if (xPositions.length < 10){
+    fill(255, 221, 0);
+    ellipse(0, 0, 90, 90);
+    }
+    else if (xPositions.length < 20)
+    {
+        fill(255, 221, 0);
+        ellipse(0, 0, 90, 90);
+        fill(204, 203, 196);
+        ellipse(166, 0, 168, 90);
+    }
+        else if (xPositions.length < 60)
+    {
+        fill(255, 221, 0);
+        ellipse(0, 0, 90, 90);
+        fill(204, 203, 196);
+        ellipse(166, 0, 168, 90);
+        fill(125, 124, 120);
+        ellipse(302, 0, 168, 137);
+    }
+        else
+    {
+        fill(204, 203, 196);
+        ellipse(166, 0, 168, 90);
+        fill(125, 124, 120);
+        ellipse(302, 0, 168, 137);
+        fill(92, 84, 52);
+        ellipse(389, 30, 168, 137);
+        fill(92, 84, 52);
+        ellipse(54, 30, 168, 137);
+    }
+};
+
