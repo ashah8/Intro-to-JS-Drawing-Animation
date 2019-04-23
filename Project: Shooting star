@@ -1,0 +1,45 @@
+var xPos = 72;
+var yPos = 65;
+var xSize = 10;
+var ySize = 10;
+
+var x2 = 72;
+var y2 = 65;
+
+draw = function() {
+    background(2, 0, 31);
+    fill(255, 242, 0);
+    rect(20, 20, 54, 55);
+    rect(45, 41, 54, 54);
+    line(20, 20, 46, 42);
+    line(75, 20, 99, 42);
+    line(20, 75, 45, 95);
+    fill(255, 0, 0);
+    ellipse(73, 67, 30, 30);
+    fill(255, 242, 0);
+    noStroke();
+    triangle(75,21, 48, 41, 96, 41);
+    triangle(45,94, 21, 74, 45, 41);
+    noStroke();
+    fill(148, 83, 83);
+    rect(-1, 282, 37, 118);
+    rect(34, 218, 37, 192);
+    rect(70, 198, 37, 192);
+    rect(70, 314, 278, 296);
+    rect(294, 277, 278, 296);
+    stroke(0, 0, 0);
+    fill(252, 8, 8);
+    ellipse(xPos, yPos, xSize, ySize);
+    ellipse(x2, y2, 10, 10);
+    xPos++;
+    yPos++;
+    xSize++;
+    ySize++;
+    
+    x2++;
+    
+    
+};
+
+
+
