@@ -1,0 +1,30 @@
+background(89, 216, 255);
+var drawFish = function(centerX, centerY, bodyLength, bodyHeight, bodyColor, tailWidth){
+    noStroke();
+    fill(bodyColor);
+    // body
+    ellipse(centerX, centerY, bodyLength, bodyHeight);
+    // tail
+    var tailHeight = bodyHeight/2;
+    triangle(centerX-bodyLength/2, centerY,
+             centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+             centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+    // eye
+    fill(33, 33, 33);
+    ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+};
+
+
+
+drawFish(103, 78, 40, 50, color(240, 9, 9), 80);
+drawFish(213, 131, 183, 38, color(0, 117, 117),80);
+drawFish(213, 177, -117, 38, color(115, 100, 0), -90);
+
+
+var seaWeed = function(h, l, w, h2, color2){
+    fill(color2);
+    rect(h, l, w, h2);
+};
+
+seaWeed(40, 404, 45, -70, color(6, 51, 4));
+seaWeed(218, 404, 77, -149, color(6, 51, 4));
