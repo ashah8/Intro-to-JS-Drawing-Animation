@@ -1,0 +1,35 @@
+fill(0, 0, 0);
+ellipse(200, 200, 375, 375);
+fill(60, 0, 255);
+triangle(200, 104, 280, 280, 120, 280);
+fill(255, 255, 255);
+var answer = random(1, 5);
+var roundedanswer = round(answer);
+if (roundedanswer === 1) {
+    fill(32, 128, 35);
+    text("NOT YET", 176, 200);
+    text("You're fate has been sealed", 125, 220);
+}
+else if (roundedanswer === 2)
+{
+    fill(32, 128, 120);
+    text("ICE COLD", 176, 200);
+    text("You eat bugs!", 125, 220);
+}
+else if (roundedanswer === 3)
+{
+    fill(195, 139, 240);
+    text("GREEDY", 176, 200);
+    text("More stuff you want!", 125, 220);
+}else if (roundedanswer === 4)
+{
+    fill(232, 121, 221);
+    text("PINK MILK", 176, 200);
+    text("Strawberry flavour", 125, 220);
+}
+else
+{
+    fill(255, 255, 255);
+    text("WHAT", 176, 200);
+    text("??????", 125, 220);
+}
