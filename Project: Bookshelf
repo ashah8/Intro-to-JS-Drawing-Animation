@@ -1,0 +1,39 @@
+background(26, 19, 0); //sets the background
+var book = [
+    {title: "The Giver",
+    stars: 4,
+    description: "A mind boggling book"
+    },
+    {title:"The Taker",
+    stars: 1,
+    description: "I am taking from you."},
+    {
+        title: "The Robber",
+        stars: 3,
+        description: "Pull up a robber"
+    },
+    { title: "Caution",
+      stars: 6,
+      description: "Teaches how to be safe"
+    }
+];
+
+// draw shelf
+for (var j = 0; j < 5; j++)
+{
+fill(173, 113, 22);
+rect(0, 80*j + 120, width, 10);
+}
+// draw one book
+fill(214, 255, 219);
+for (var i = 0; i < book.length; i++) {
+    fill(25, i*50, 0);
+    rect(10 + i*90, 20, 90, 100);//displays the physical book
+    fill(207, 132, 132);
+    text(book[i].title, 15 + i * 90, 29, 70, 100); //displays title
+    fill(255, i*20, i*100);
+    text(book[i].description, 15 + i * 90, 48, 70, 100); //displays description
+    for (var f = 0; f < book[i].stars; f++){
+    image(getImage("cute/Star"), f*13 + 20 + i*90, 90, 20, 30);
+    }
+}
